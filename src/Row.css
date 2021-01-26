@@ -1,3 +1,9 @@
+/* Row container */
+
+.row {
+    margin-left: 20px;
+}
+
 .row_posters {
     display: flex;
     overflow-y: hidden;
@@ -8,6 +14,8 @@
 .row_posters::-webkit-scrollbar {
     display: none;
 }
+
+/* Normal Row Styles */
 
 .row_poster {
     object-fit: contain;
@@ -21,6 +29,8 @@
     transform: scale(1.08);
     opacity: 1;
 }
+
+/* Large Row Styles */
 
 .row_posterLarge {
     max-height: 250px;
