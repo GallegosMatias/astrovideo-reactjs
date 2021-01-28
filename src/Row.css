@@ -43,4 +43,6 @@
 
 /* Broken Row */
 
-
+.broken_row {
+    display: none;
+}
