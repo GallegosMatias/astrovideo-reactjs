@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import axios from './axios';
-import requests from './requests';
+
+import axios from '../utils/axios';
+import requests from '../utils/requests';
 
 function Banner() {
     const [movie, setMovie] = useState([]);
@@ -16,7 +17,7 @@ function Banner() {
             return request;
         }
         fetchData();
-        
+
     }, []);
 
     console.log(movie);
@@ -33,10 +34,10 @@ function Banner() {
                 <h1>
                     {movie?.title || movie?.name || movie?.original_name}
                 </h1>
-                
+
                 <div className="banner_button">Play</div>
                 <div className="banner_button">My List</div>
-                
+
                 <h1 className="banner_description">
                     {movie?.overview}
                 </h1>

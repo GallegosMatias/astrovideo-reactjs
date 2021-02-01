@@ -1,13 +1,15 @@
 import React from 'react';
-import './App.css';
-import Row from './Row';
-import Banner from './Banner';
-import requests from './requests';
+
+import Row from './components/Row';
+import Banner from './components/Banner';
+
+import requests from './utils/requests';
+
+import './styles/App.css';
 
 function App() {
   return (
     <div className="app">
-      
       {/* Navbar*/}
       <Banner />
 
