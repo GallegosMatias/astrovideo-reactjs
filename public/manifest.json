@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Astro Video",
+  "name": "Astro Videos Page",
   "icons": [
     {
       "src": "favicon.ico",
