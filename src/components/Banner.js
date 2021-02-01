@@ -20,7 +20,14 @@ function Banner() {
 
     }, []);
 
-    console.log(movie);
+    //Movie backdrop validation
+    if(movie.backdrop_path === null){
+        window.location.reload();
+    }
+
+    console.table(movie);
+    console.log(`${movie?.backdrop_path}`);
+    console.log(movie.backdrop_path);
 
     return (
         <header className="banner"
