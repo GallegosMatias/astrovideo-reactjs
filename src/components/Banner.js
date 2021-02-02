@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import axios from '../utils/axios';
 import requests from '../utils/requests';
 
+import '../styles/Banner.css';
+
 function Banner() {
     const [movie, setMovie] = useState([]);
 
@@ -29,6 +31,10 @@ function Banner() {
     console.log(`${movie?.backdrop_path}`);
     console.log(movie.backdrop_path);
 
+    function truncate(str, n) {
+        return str?.length > n ? str.substr(0, n - 1) + "..." : str;
+    }
+
     return (
         <header className="banner"
             style={{
@@ -38,17 +44,19 @@ function Banner() {
             }}
         >
             <div className="banner_contents">
-                <h1>
+                <h1 className="banner_title">
                     {movie?.title || movie?.name || movie?.original_name}
                 </h1>
 
-                <div className="banner_button">Play</div>
-                <div className="banner_button">My List</div>
+                <button className="banner_button">Play</button>
+                <button className="banner_button">My List</button>
 
                 <h1 className="banner_description">
-                    {movie?.overview}
+                    {truncate(movie?.overview, 150)}
                 </h1>
             </div>
+
+            <div className="banner-fadeBottom" />
         </header>
     )
 }
